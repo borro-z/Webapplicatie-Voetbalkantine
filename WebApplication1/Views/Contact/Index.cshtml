@@ -1,0 +1,27 @@
+﻿@model WebApplication1.Models.ContactViewModels.ContactEmailViewModel
+
+@{
+    ViewData["Title"] = "Contactpagina";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Contact</h1>
+<div class="container">
+    <h4>@ViewData["Status"]</h4>
+    <form asp-action="Send">
+        <label asp-for="Naam">Name</label>
+        <input asp-for="Naam" placeholder="Naam">
+
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" placeholder="Email">
+
+        <label asp-for="Onderwerp">Onderwerp</label>
+        <input asp-for="Onderwerp" placeholder="Onderwerp">
+        
+        <label asp-for="Bericht">Bericht</label>
+        <textarea asp-for="Bericht" placeholder="Bericht" style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
